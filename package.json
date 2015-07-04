@@ -1,0 +1,28 @@
+{
+  "name": "fabcaria",
+  "version": "1.0.0",
+  "description": "We record what you had and how much it is in your fridge and then we suggest what dishes for your dinner. If there are missing ingredients, you will be suggested to buy it from the most convenient grocery.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dolphin22/Fabcaria.git"
+  },
+  "keywords": [
+    "Fabcaria"
+  ],
+  "author": "Fablab Saigon",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/dolphin22/Fabcaria/issues"
+  },
+  "homepage": "https://github.com/dolphin22/Fabcaria#readme",
+  "dependencies": {
+    "body-parser": "^1.13.1",
+    "express": "^4.13.0",
+    "mongoose": "^4.0.6",
+    "morgan": "^1.6.1"
+  }
+}
