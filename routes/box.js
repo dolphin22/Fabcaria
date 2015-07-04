@@ -29,7 +29,7 @@ router.route('/:rfidTag')
                 })
         })
         .put(function(req, res) {
-                Box.findById(req.params.box_id, function(err, box) {
+                Box.findOne({rfidTag: req.params.rfidTag}, function(err, box) {
                         if(err) res.send(err)
                         box.rfidTag = req.body.rfidTag
                         box.foodName = req.body.foodName
