@@ -7,6 +7,6 @@ var recipeSchema = new Schema({
 	ingredients: String
 })
 
-recipeSchema.index({ ingredients: "text" })
+recipeSchema.index({ name: "text", ingredients: "text" })
 
 module.exports = mongoose.model('Recipe', recipeSchema)

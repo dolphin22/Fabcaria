@@ -4,7 +4,7 @@ var express = require('express'),
 
 router.route('/')
         .post(function(req, res) {
-		Recipe.find({ $text: { $search: req.body.foodName }}, function(err, recipes) {
+		Recipe.find({ $text: { $search: req.body.foodName }}, { score:  {$meta: "textScore" }}).sort({ score: { $meta: "textScore" }}).exec(function(err, recipes) {
 			if(err) res.send(err)
 			res.send(recipes)	
 		})
