@@ -7,7 +7,7 @@ router.route('/')
         .post(function(req, res) {
 		Recipe.find({ $text: { $search: req.body.recipeName }}, function(err, recipe) {
 			if(err) res.send(err)
-			res.send(recipe.ingredients)
+			res.send(recipe)
 		})
         })
 

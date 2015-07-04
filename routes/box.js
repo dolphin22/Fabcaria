@@ -21,9 +21,9 @@ router.route('/')
                 })
         })
 
-router.route('/:box_id')
+router.route('/:rfidTag')
         .get(function(req, res) {
-                Box.findById(req.params.box_id, function(err, box) {
+                Box.find({rfidTag: req.params.rfidTag}, function(err, box) {
                         if(err) res.send(err)
                         res.json(box)
                 })
@@ -43,7 +43,7 @@ router.route('/:box_id')
         })
         .delete(function(req, res) {
                 Box.remove({
-                        _id: req.params.box_id
+                        rfidTag: req.params.rfidTag
                 }, function(err, box){
                         if(err) res.send(err)
                         res.json({ message: 'Box deleted' })
