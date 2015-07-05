@@ -6,7 +6,7 @@ router.route('/')
         .post(function(req, res) {
                 var recipe = new Recipe()
                 recipe.name = req.body.name
-		recipe.imageurl = req.body.imageurl
+		recipe.image = req.body.image
                 recipe.ingredients = req.body.ingredients
 
                 recipe.save(function(err) {
@@ -32,7 +32,7 @@ router.route('/:recipe_id')
                 Recipe.findById(req.params.recipe_id, function(err, recipe) {
                         if(err) res.send(err)
                         recipe.name = req.body.name
-                        recipe.imageurl = req.body.imageurl
+                        recipe.image = req.body.image
                         recipe.ingredients = req.body.ingredients
 
                         recipe.save(function(err){

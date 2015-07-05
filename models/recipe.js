@@ -3,7 +3,7 @@ var mongoose = require('mongoose'),
 
 var recipeSchema = new Schema({ 
 	name: String,
-	imageurl: String,
+	image: String,
 	ingredients: String
 })
 

@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/dolphin22/Fabcaria#readme",
   "dependencies": {
+    "async": "^1.3.0",
     "body-parser": "^1.13.1",
     "express": "^4.13.0",
     "mongoose": "^4.0.6",

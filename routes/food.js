@@ -21,9 +21,9 @@ router.route('/')
                 })
         })
 
-router.route('/:food_id')
+router.route('/:food_name')
         .get(function(req, res) {
-                Food.findById(req.params.food_id, function(err, food) {
+                Food.findOne(req.params.food_name, function(err, food) {
                         if(err) res.send(err)
                         res.json(food)
                 })
